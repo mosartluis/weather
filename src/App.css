@@ -1,0 +1,113 @@
+:root {
+  --color-01d: #1caba5;
+  --bg-01d: linear-gradient(332deg,#0ec1c1,#fff9da 77%);
+  --color-01n: #022c3c;
+  --bg-01n: linear-gradient(332deg,#22c1c3,#173758);
+  --color-02d: #2378a0;
+  --bg-02d: linear-gradient(332deg,#94bdce,#2d94c5 77%);
+  --color-02n: var(--color-01n);
+  --bg-02n: var(--bg-01n);
+  --color-03d: var(--color-02d);
+  --bg-03d: var(--bg-02d);
+  --color-03n: var(--color-02n);
+  --bg-03n: var(--bg-02n);
+  --color-04d: var(--color-02d);
+  --bg-04d: var(--bg-02d);
+  --color-04n: var(--color-02n);
+  --bg-04n: var(--bg-02n);
+  --color-09d: #281c58;
+  --bg-09d: linear-gradient(332deg,#0e6ec1,#372873 77%);
+  --color-09n: #061038;
+  --bg-09n: linear-gradient(332deg,#372873,#061038 77%);
+  --color-10d: var(--color-09d);
+  --bg-10d: var(--bg-09d);
+  --color-10n: var(--color-09n);
+  --bg-10n: var(--bg-09n);
+  --color-11d: #190e42;
+  --bg-11d: linear-gradient(332deg,#241950,#341942 77%);
+  --color-11n: #0d0629;
+  --bg-11n: linear-gradient(332deg,#241950,#14041d 77%);
+  --color-13d: #2d7abb;
+  --bg-13d: linear-gradient(332deg,#0e7fc1,#daf8ff 75%);
+  --color-13n: #041c25;
+  --bg-13n: linear-gradient(332deg,#1b2a31,#144a56 75%);
+  --color-50d: #0c5a45;
+  --bg-50d: linear-gradient(332deg,#005f4d,#55dac1 75%);
+  --color-50n: var(--color-50d);
+  --bg-50n: var(--bg-50d);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.weather-body img {
+    display: block;
+    margin: 0 auto;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.weather-body {
+    color: #fff;
+    text-shadow: 0 0 7px rgb(0 0 0 / 13%);
+    padding: 15px 0;
+    background: var(--current-bg);
+}
+
+.weather-more-info {
+  font-family: sans-serif;
+  color: var(--current-color);
+  display: flex;
+  width: 100%;
+  padding: 60px;
+  justify-content: space-around;
+  align-content: center;
+  text-align: left;
+  border-radius: 0 0 10px 10px;
+}
+
+/*style attribute {
+    --current-color: var(--color-04d);
+    --current-bg: var(--bg-04d);
+}*/
+body {
+    font-family: "Rimouski";
+    background: #ceefff;
+    margin: 0;
+    height: inherit;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #282c34;
+  display:contents;
+  position: relative;  
+}
+
+.AppBtn{
+  display: block;
+  font-size: 20px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(35, 88, 111);
+  color: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-100%);
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0 #000A;
+  transition: box-shadow 200ms ease;
+}
+
+.AppImg{
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
