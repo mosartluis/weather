@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Font-Poppins: "Poppins", sans-serif;
+  --Font-Devanagari: "Tiro Devanagari Sanskrit", serif;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(25, 65, 77, 0.809);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./Images/broken clouds.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card {
+  width: 60%;
+  background-color: rgba(200, 213, 214, 0.616);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.head {
+  padding: 10px;
+  font-family: var(--Font-Poppins);
+}
+
+.head > h1 {
+  animation: tada;
+  animation-duration: 2s;
+  color: #162a3b;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.head > h4 {
+  color: #030b40;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.hero-body {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.meteorologic {
+  width: 7rem;
+}
+
+.description {
+  padding: 10px;
+  font-family: var(--Font-Devanagari);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title > h4 > i {
+  font-size: 15px;
+}
+
+.title {
+  padding: 5px 5px;
+  font-size: 1.2rem;
+  font-family: var(--Font-Poppins);
+}
+
+.data > * {
+  display: flex;
+  gap: 10px;
+}
+
+.data {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.data i {
+  font-size: 2rem;
+}
+
+.data p {
+  display: flex;
+  align-items: center;
+}
+
+.windSpeed > i {
+  color: rgba(14, 138, 233, 0.838);
+}
+
+.cloud > i {
+  color: rgba(47, 85, 239, 0.842);
+}
+
+.pressure > i {
+  color: rgba(237, 96, 71, 0.826);
+}
+
+.humidity > i {
+  color: rgba(14, 138, 233, 0.838);
+}
+
+.button {
+  padding: 10px;
+}
+
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #ff3d00;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  background-color: rgba(229, 229, 229, 0.712);
+}
+
+@media screen and (max-width: 680px) {
+  .hero-body {
+    grid-template-columns: auto;
+  }
+
+  .data {
+    width: 98%;
+  }
+}
